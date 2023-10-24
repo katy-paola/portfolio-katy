@@ -1,0 +1,37 @@
+---
+import Nav from './Nav.astro';
+import Item from './Item.astro';
+import Project from './Project.astro';
+
+import projectsNav from '../data/projects-nav.json';
+
+interface Props {
+    projects: {
+        src: string;
+        title: string;
+    }[];
+}
+
+const { projects } = Astro.props;
+---
+
+<section>
+    <header>
+        <h2>Proyectos</h2>
+        <Nav 
+            items={projectsNav}
+        />
+    </header>
+    <section>
+        <ul>
+            {
+                projects.map((project) => (
+                    <Project 
+                        src={project.src}
+                        title={project.title}
+                    />
+                ))
+            }
+        </ul>
+    </section>
+</section>

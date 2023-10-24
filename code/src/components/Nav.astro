@@ -1,0 +1,25 @@
+---
+import Item from "./Item.astro";
+
+interface Props {
+    items: {
+        href: string;
+        body: string;
+    }[];
+}
+
+const { items } = Astro.props;
+---
+
+<nav>
+    <ul>
+        {
+            items.map((item) => (
+                <Item 
+                    href={item.href}
+                    body={item.body}
+                />
+            ))
+        }
+    </ul>
+</nav>

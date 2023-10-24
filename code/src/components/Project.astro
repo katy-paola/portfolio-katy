@@ -1,0 +1,31 @@
+---
+import Item from './Item.astro';
+
+interface Props {
+    src: string;
+    title: string;
+}
+
+const { src, title} = Astro.props;
+---
+
+<li>
+    <article>
+        <figure>
+            <img src={src} alt="" width="200px">
+        </figure>
+        <section>
+            <h3>{title}</h3>
+            <ul>
+                <Item 
+                    href="#"
+                    body="Ver proyecto"
+                />
+                <Item 
+                    href="#"
+                    body="Ver código"
+                />
+            </ul>
+        </section>
+    </article>
+</li>

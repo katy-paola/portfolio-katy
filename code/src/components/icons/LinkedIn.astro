@@ -1,0 +1,17 @@
+---
+interface Props {
+    href: string;
+    title: string;
+    width: string;
+    height: string;
+}
+
+const { href, title, width, height } = Astro.props;
+---
+<a href={href} title={title}>
+    <svg width={width} height={height} viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4.7105 7.59863H4.7365C6.1315 7.59863 7 6.59863 7 5.34863C6.974 4.07113 6.1315 3.09863 4.763 3.09863C3.3945 3.09863 2.5 4.07113 2.5 5.34863C2.5 6.59863 3.368 7.59863 4.7105 7.59863ZM2.5 9.09863H7V22.0986H2.5V9.09863ZM22.5 13.8486C22.5 11.2251 20.3735 9.09863 17.75 9.09863C16.2235 9.09863 14.869 9.82163 14 10.9406V9.09863H9.5V22.0986H14V14.5986C14 13.4941 14.8955 12.5986 16 12.5986C17.1045 12.5986 18 13.4941 18 14.5986V22.0986H22.5C22.5 22.0986 22.5 14.5761 22.5 13.8486Z" fill="currentColor"/>
+    </svg>
+</a>   
+
+    

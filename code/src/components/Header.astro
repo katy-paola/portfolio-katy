@@ -1,0 +1,24 @@
+---
+import Logo from './icons/Logo.astro';
+import Menu from './icons/Menu.astro';
+import Nav from './Nav.astro';
+import SocialMedia from './SocialMedia.astro';
+
+import mainNav from "../data/main-nav.json";
+---
+
+<header>
+    <Logo 
+        href="#"
+        width="24px"
+        height="auto"
+    />
+    <Nav 
+        items={mainNav}
+    />
+    <Menu 
+        width="16px"
+        height="auto"
+    />
+    <SocialMedia />
+</header>
