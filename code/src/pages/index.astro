@@ -1,186 +1,144 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import Introduce from '../components/Introduce.astro';
-import Nav from '../components/Nav.astro';
-import Projects from '../components/Projects.astro';
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Introduce from "../components/Introduce.astro";
+import Projects from "../components/Projects.astro";
+import Experience from "../components/Experience.astro";
 
-import projects from '../data/projects.json';
+import projects from "../data/projects.json";
 ---
 
 <Layout title="Katy Barboza">
-	<main>
-		<Header />
-		<Introduce />
-		<Projects 
-			projects={projects}
-		/>
-		<section>
-			<header>
-				<h2>Experiencia</h2>
-			</header>
-			<section>
-				<ul>
-					<li>
-						<article>
-							<figure>
-								<img src="favicon.svg" alt="" width="40px">
-							</figure>
-							<section>
-								<h3>Js Conf Colombia 2023</h3>
-								<p>Voluntariado web para colaborar con el desarrollo del landing page de JS Conf Colombia 2023.</p>
-								<small>Junio 2023 - Actualidad</small>
-							</section>
-						</article>
-					</li>
-					<li>
-						<article>
-							<figure>
-								<img src="favicon.svg" alt="" width="40px">
-							</figure>
-							<section>
-								<h3>Js Conf Colombia 2023</h3>
-								<p>Voluntariado web para colaborar con el desarrollo del landing page de JS Conf Colombia 2023.</p>
-								<small>Junio 2023 - Actualidad</small>
-							</section>
-						</article>
-					</li>
-					<li>
-						<article>
-							<figure>
-								<img src="favicon.svg" alt="" width="40px">
-							</figure>
-							<section>
-								<h3>Js Conf Colombia 2023</h3>
-								<p>Voluntariado web para colaborar con el desarrollo del landing page de JS Conf Colombia 2023.</p>
-								<small>Junio 2023 - Actualidad</small>
-							</section>
-						</article>
-					</li>
-				</ul>
-				<figure>
-					<img src="favicon.svg" alt="" width="300px">
-				</figure>
-			</section>
-			<section>
-				<header>
-					<h2>Acerca de mí</h2>
-				</header>
-				<section>
-					<p>
-						Diseñadora web y desarrolladora front-end en formación, con experiencia en Figma, HTML, CSS, JavaScript, Astro, Sass y Tailwind. Actualmente soy voluntaria en el equipo de desarrollo web de JS Conf Colombia 2023, donde participo en la maquetación de las interfaces de la web del evento.
-					</p>
-					<section>
-						<p>Levántate, vístete y di <q>Hola, mundo</q>.</p>
-						<figure>
-							<img src="favicon.svg" alt="" width="300px">
-						</figure>
-					</section>
-				</section>
-			</section>
-		</section>
-		<section>
-			<header>
-				<h2>Contactar</h2>
-			</header>
-			<form>
-				<fieldset>
-					<label>
-						Nombre:
-						<input type="text" name="name">
-					</label>
-					<label>
-						Correo electrónico:
-						<input type="email" name="email">
-					</label>
-					<label>
-						Mensaje:
-						<textarea name="message"></textarea>
-					</label>
-				</fieldset>
-				<button>Enviar</button>
-			</form>
-			<figure>
-				<img src="favicon.svg" alt="" width="300px">
-			</figure>
-		</section>
-	<footer>
-		<ul>
-			<li>
-				<a href="#">
-					<img src="favicon.svg" alt="" width="24px">
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<img src="favicon.svg" alt="" width="24px">
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<img src="favicon.svg" alt="" width="24px">
-				</a>
-			</li>
-		</ul>
-	</footer>
-	</main>
+  <main>
+    <Header />
+    <Introduce />
+    <Projects projects={projects} />
+    <Experience />
+    <section>
+      <header>
+        <h2>Acerca de mí</h2>
+      </header>
+      <section>
+        <p>
+          Diseñadora web y desarrolladora front-end en formación, con
+          experiencia en Figma, HTML, CSS, JavaScript, Astro, Sass y Tailwind.
+          Actualmente soy voluntaria en el equipo de desarrollo web de JS Conf
+          Colombia 2023, donde participo en la maquetación de las interfaces de
+          la web del evento.
+        </p>
+        <section>
+          <p>Levántate, vístete y di <q>Hola, mundo</q>.</p>
+          <figure>
+            <img src="favicon.svg" alt="" width="300px" />
+          </figure>
+        </section>
+      </section>
+    </section>
+    <section>
+      <header>
+        <h2>Contactar</h2>
+      </header>
+      <form>
+        <fieldset>
+          <label>
+            Nombre:
+            <input type="text" name="name" />
+          </label>
+          <label>
+            Correo electrónico:
+            <input type="email" name="email" />
+          </label>
+          <label>
+            Mensaje:
+            <textarea name="message"></textarea>
+          </label>
+        </fieldset>
+        <button>Enviar</button>
+      </form>
+      <figure>
+        <img src="favicon.svg" alt="" width="300px" />
+      </figure>
+    </section>
+    <footer>
+      <ul>
+        <li>
+          <a href="#">
+            <img src="favicon.svg" alt="" width="24px" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="favicon.svg" alt="" width="24px" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="favicon.svg" alt="" width="24px" />
+          </a>
+        </li>
+      </ul>
+    </footer>
+  </main>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-	}
-	.astro-a {
-		position: absolute;
-		top: -32px;
-		left: 50%;
-		transform: translatex(-50%);
-		width: 220px;
-		height: auto;
-		z-index: -1;
-	}
-	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
-	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-	}
+  main {
+    margin: auto;
+    padding: 1rem;
+    width: 800px;
+    max-width: calc(100% - 2rem);
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  .astro-a {
+    position: absolute;
+    top: -32px;
+    left: 50%;
+    transform: translatex(-50%);
+    width: 220px;
+    height: auto;
+    z-index: -1;
+  }
+  h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+  .instructions {
+    margin-bottom: 2rem;
+    border: 1px solid rgba(var(--accent-light), 25%);
+    background: linear-gradient(
+      rgba(var(--accent-dark), 66%),
+      rgba(var(--accent-dark), 33%)
+    );
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  .instructions code {
+    font-size: 0.8em;
+    font-weight: bold;
+    background: rgba(var(--accent-light), 12%);
+    color: rgb(var(--accent-light));
+    border-radius: 4px;
+    padding: 0.3em 0.4em;
+  }
+  .instructions strong {
+    color: rgb(var(--accent-light));
+  }
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 2rem;
+    padding: 0;
+  }
 </style>
